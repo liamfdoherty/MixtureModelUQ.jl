@@ -9,15 +9,15 @@ model1 = GMM(components, weight1)
 model2 = GMM(components, weight2)
 
 # Collect samples for both models
-model1_data = DataFrame(samples = Float64[], components = Float64[])
 N_samples = 1000
+
+model1_data = DataFrame(samples = Float64[], components = Float64[])
 for i = 1:N_samples
     sample, component = select_and_sample(model1)
     push!(model1_data, [sample, component])
 end
 
 model2_data = DataFrame(samples = Float64[], components = Float64[])
-N_samples = 1000
 for i = 1:N_samples
     sample, component = select_and_sample(model2)
     push!(model2_data, [sample, component])

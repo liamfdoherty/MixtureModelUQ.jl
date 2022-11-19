@@ -1,6 +1,3 @@
-using Distributions
-using StatsBase
-
 struct GMM
     num_components::Int            # Number of components
     d::Int                         # dimension of Gaussian
